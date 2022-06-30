@@ -2,6 +2,7 @@
 Bot de gmail para manejar descargas de archivos x correo electronico 
 # API pyemailbot
    ``` 
+   from pyemailbot.client import EmailBot,EmailMessage
    def onenteremail(bot,message):
        pass
    def main():
