@@ -1,0 +1,77 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2c253c89-7de8-49f6-9428-8bd782b1b9e1</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>deltafile2mailbot</Name>
+    <RootNamespace>SmtpNatVpnServer</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="main.py" />
+    <Compile Include="pydownloader\downloader.py" />
+    <Compile Include="pydownloader\googledrive.py" />
+    <Compile Include="pydownloader\mediafire.py" />
+    <Compile Include="pydownloader\megacli\crypto.py" />
+    <Compile Include="pydownloader\megacli\errors.py" />
+    <Compile Include="pydownloader\megacli\mega.py" />
+    <Compile Include="pydownloader\megacli\megafolder.py" />
+    <Compile Include="pydownloader\tltdownloader.py" />
+    <Compile Include="pydownloader\utils.py" />
+    <Compile Include="pydownloader\youtube.py" />
+    <Compile Include="pyemailbot\client.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pyemailbot\threads.py" />
+    <Compile Include="pyemailbot\utils.py" />
+    <Compile Include="zipfile.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.png" />
+    <Content Include="Procfile" />
+    <Content Include="pydownloader\megacli\__pycache__\crypto.cpython-37.pyc" />
+    <Content Include="pydownloader\megacli\__pycache__\errors.cpython-37.pyc" />
+    <Content Include="pydownloader\megacli\__pycache__\mega.cpython-37.pyc" />
+    <Content Include="pydownloader\requirements.txt" />
+    <Content Include="pydownloader\__pycache__\downloader.cpython-37.pyc" />
+    <Content Include="pydownloader\__pycache__\googledrive.cpython-37.pyc" />
+    <Content Include="pydownloader\__pycache__\mediafire.cpython-37.pyc" />
+    <Content Include="pydownloader\__pycache__\tltdownloader.cpython-37.pyc" />
+    <Content Include="pydownloader\__pycache__\utils.cpython-37.pyc" />
+    <Content Include="pydownloader\__pycache__\youtube.cpython-37.pyc" />
+    <Content Include="requirements.txt" />
+    <Content Include="runtime.txt" />
+    <Content Include="folderlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="root\" />
+    <Folder Include="pydownloader\" />
+    <Folder Include="pydownloader\megacli\" />
+    <Folder Include="pydownloader\megacli\__pycache__\" />
+    <Folder Include="pydownloader\__pycache__\" />
+    <Folder Include="pyemailbot\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
